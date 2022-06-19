@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bar & Restorant</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/1c4df768bf.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styling.css"> 
+        <script src="script.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+    </head>
+    <body>
+        <div id="nav-bar">
+            <div id="nav-bar-left-side">
+                <a href="#main-container"><img src="images/logo4-modified.png" id="logo"> </a>
+                <ul id="nav-items">
+                    <li><a class="hover-underline-animation" id="onClickHomeButton">Home</a></li>
+                    <!-- <li><a class="hover-underline-animation" href="https://g.page/FSHNatyres?share" target="_blank">Adress</a></li> -->
+                    <li><a class="hover-underline-animation" id="onClickFeebackButton">Feedback</a></li>
+                    <li><a class="hover-underline-animation" href="#footer-con">About</a></li>
+                    
+                </ul>
+            </div>
+            <div id="nav-bar-right-side"><a>
+                <input type="button" value="Reserve" id="reserve-button"></a>
+            </div>
+        </div>
+
+
+        <div id="main-container">
+     
+            <div id="home">
+
+                <div id="background-img">
+                    <div id="restaurant-name-con">
+                        <span id="restaurant-name">The P'sghetti Bar</span>
+                        <a id="onClickMenuButton" class="menu-button">Go to Menu</a>
+                    </div>
+                </div>
+
+                <div class="italian-cousine">
+                    <div style="text-align: center; margin-top: 10px;margin-bottom: 10px;display:flex;justify-content:center;flex-direction: column;align-items: center;">
+                        <p id="welcome-to-rome"> Welcome to Rome </p>
+                        <p style="font-size: 20px;">Our restorants food varies from traditional italian cousine to some of the most exquisite dishes made by our chefs.
+                        We have been opened since 2021 and have won 5 michellin stars and our chef's skills are considered the best around the world.</p>
+                        <div>
+                            <a href="https://www.cipassoitalia.it/" target="_blank"><input type="button" value="Read more" id="rome-button"></a>
+                        </div>
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="https://i.pinimg.com/originals/d2/9b/5b/d29b5b83b01cceeca457bdbb33dd92bd.gif" style="height: max-content; width: max-content; margin-top: 15px; margin-right: 50px;box-shadow: 0px 0px 6px 0px black;">
+                    </div>
+                </div>
+
+            </div>
+            <div id="menu">
+                <table id="menu-table" style="width: 70%;" cellpadding="5" cellspacing="24">
+                  <tbody>
+                    <tr>
+                        <th colspan="3" style="font-size: 100px;"><b style="font-weight:600;color: white;font-family:'Raleway', sans-serif ;">MENU</b></th>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="font-size: 25px; text-align: center;"><b class="food-category">Pizza</b></th>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Margherita </b> <br> <em>Tomato, mozzarella, basil</em></td>
+                        <td><b class="food-type">12€</b></td>
+                        <td><button id="order1" class="button-order" type="reset" onclick="order1()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Pastaria Marinara </b> <br> <em>Tomato, onion, garlic, oregano, basil, pecorino</em></td>
+                        <td><b class="food-type">11.25€</b></td>
+                        <td><button id="order2" class="button-order" type="reset" onclick="order2()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Four cheese </b> <br> <em>Mozzarella, fontina, gorgonzola dolce, grana padano</em></td>
+                        <td><b class="food-type">13.75€</b></td>
+                        <td><button id="order3" class="button-order" type="reset" onclick="order3()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> House-Made Pepperoni </b> <br> <em>Tomato, fontina</em></td>
+                        <td><b class="food-type">13.75€</b></td>
+                        <td><button id="order4" class="button-order" type="reset" onclick="order4()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> The Holmes </b> <br> <em>Mozzarella, fontina, gorgonzola dolce, grana padano</em></td>
+                        <td><b class="food-type">15€</b></td>
+                        <td><button id="order5" class="button-order" type="reset" onclick="order5()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Pizza of the Day </b> <br> <em>Marinated green tomato, tomato, basil, garlic, burrata</em></td>
+                        <td><b class="food-type">13.75€</b></td>
+                        <td><button id="order6" class="button-order" type="reset" onclick="order6()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="text-align: center; font-size: 25px;"> <b class="food-category">Pasta</b> </td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Spaghetti al Pomodoro e Basilico </b> <br> <em>Olio d'oliva, aglio, pomodori, basilico, grana padana</em></td>
+                        <td><b class="food-type">10€</b></td>
+                        <td><button id="order7" class="button-order" type="reset" onclick="order7()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Spaghetti alla carbonara </b> <br> <em>Crudo di manzo, uova, pana, grana padana</em></td>
+                        <td><b class="food-type">11€</b></td>
+                        <td><button id="order8" class="button-order" type="reset" onclick="order8()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Spaghetti alla bolognese </b> <br> <em>Carne macinata di manzo, salsa di pomodoro, grana padana</em></td>
+                        <td><b class="food-type">11€</b></td>
+                        <td><button id="order9" class="button-order" type="reset" onclick="order9()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Pene all'arrabbiata </b> <br> <em>Cipolle, peperoni, aglio, salsa di pomodoro, peperoncino</em></td>
+                        <td><b class="food-type">11€</b></td>
+                        <td><button id="order10" class="button-order" type="reset" onclick="order10()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Pene 4 formaggi </b> <br> <em>Gorgonzola, grana padana, guda, mozzarella</em></td>
+                        <td><b class="food-type">11€</b></td>
+                        <td><button id="order11" class="button-order" type="reset" onclick="order11()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Pene cubano </b> <br> <em>Pancetta di manzo, funghi, salsa di pomodoro, pana, grana padana</em></td>
+                        <td><b class="food-type">11€</b></td>
+                        <td><button id="order12" class="button-order" type="reset" onclick="order12()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="3" style="text-align: center; font-size: 25px;"> <b class="food-category">Risotto</b> </td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Rizoto 4 formaggi </b> <br> <em>Gorgonzola, mozzarella, guda, grana padana</em></td>
+                        <td><b class="food-type">11€</b></td>
+                        <td><button id="order13" class="button-order" type="reset" onclick="order13()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Risotto tartufi e bastoncini di pino </b> <br> <em>Tartufi, pana, stecche di pino, grana padana</em></td>
+                        <td><b class="food-type">11€</b></td>
+                        <td><button id="order14" class="button-order" type="reset" onclick="order14()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Risotto alle verdure </b> <br> <em>Cipolle, carote, zucca, piselli, funghi, grana padana</em></td>
+                        <td><b class="food-type">11€</b></td>
+                        <td><button id="order15" class="button-order" type="reset" onclick="order15()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Risotto di pollo allo zafferano </b> <br> <em>Pollo, pana, zafferano, grana padana</em></td>
+                        <td><b class="food-type">11€</b></td>
+                        <td><button id="order16" class="button-order" type="reset" onclick="order16()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="3" style="text-align: center; font-size: 25px;"> <b class="food-category">Insalata</b> </td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Insalata verde </b></td>
+                        <td><b class="food-type">10€</b></td>
+                        <td><button id="order17" class="button-order" type="reset" onclick="order17()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Insalata Cesare </b> </td>
+                        <td><b class="food-type">11€</b></td>
+                        <td><button id="order18" class="button-order" type="reset" onclick="order18()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Insalata greca </b> </td>
+                        <td><b class="food-type">11€</b></td>
+                        <td><button id="order19" class="button-order" type="reset" onclick="order19()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Insalata di rucola </b> </td>
+                        <td><b class="food-type">11€</b></td>
+                        <td><button id="order20" class="button-order" type="reset" onclick="order20()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="3" style="text-align: center; font-size: 25px;"> <b class="food-category">Dolce</b> </td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Portocalopita </b> </td>
+                        <td><b class="food-type">11€</b></td>
+                        <td><button id="order21" class="button-order" type="reset" onclick="order21()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Kadaif con noci </b> </td>
+                        <td><b class="food-type">11€</b></td>
+                        <td><button id="order22" class="button-order" type="reset" onclick="order22()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Baklava con noci </b> </td>
+                        <td><b class="food-type">11€</b></td>
+                        <td><button id="order23" class="button-order" type="reset" onclick="order23()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Baklava con pistacchi </b></td>
+                        <td><b class="food-type">11€</b></td>
+                        <td><button id="order24" class="button-order" type="reset" onclick="order24()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="3" style="text-align: center; font-size: 25px;"> <b class="food-category">Bevande</b> </td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Vino Bianco </b> </td>
+                        <td><b class="food-type">11€</b></td>
+                        <td><button id="order25" class="button-order" type="reset" onclick="order25()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Vino Rosso </b> </td>
+                        <td><b class="food-type">11€</b></td>
+                        <td><button id="order26" class="button-order" type="reset" onclick="order26()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Primitivo </b> </td>
+                        <td><b class="food-type">11€</b></td>
+                        <td><button id="order27" class="button-order" type="reset" onclick="order27()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Greco di Tuffo </b></td>
+                        <td><b class="food-type">11€</b></td>
+                        <td><button id="order28" class="button-order" type="reset"  onclick="order28()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Pecorino </b></td>
+                        <td><b class="food-type">11€</b></td>
+                        <td><button id="order29" class="button-order" type="reset" onclick="order29()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Pinot Grigio </b></td>
+                        <td><b class="food-type">11€</b></td>
+                        <td><button id="order30" class="button-order" type="reset" onclick="order30()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Rum </b></td>
+                        <td><b class="food-type">11€</b></td>
+                        <td><button id="order31" class="button-order" type="reset" onclick="order31()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Vodka </b></td>
+                        <td><b class="food-type">11€</b></td>
+                        <td><button id="order32" class="button-order" type="reset" onclick="order32()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Gin </b></td>
+                        <td><b class="food-type">11€</b></td>
+                        <td><button id="order33" class="button-order" type="reset" onclick="order33()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><b class="food-type"> Cutty Sark </b></td>
+                        <td><b class="food-type">11€</b></td>
+                        <td><button id="order34" class="button-order" type="reset" onclick="order34()">Order <i class="fa-solid fa-money-check-dollar"></i></button></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br>
+
+                <div id="slideshow">
+                    <div class="slider">
+                        <div class="slides">
+                            <!--radio btn start-->
+                            <input type="radio" name="radio-btn" id="radio1">
+                            <input type="radio" name="radio-btn" id="radio2">
+                            <input type="radio" name="radio-btn" id="radio3">
+                            <input type="radio" name="radio-btn" id="radio4">
+                            <!--radio btn end-->
+                            <!--slide img start-->
+                            <div class="slide first">
+                                <img src="https://images.pexels.com/photos/726000/pexels-photo-726000.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                            </div>
+                            <div class="slide">
+                                <img src="https://images.pexels.com/photos/8963467/pexels-photo-8963467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                            </div>
+                            <div class="slide">
+                                <img src="https://images.pexels.com/photos/1566837/pexels-photo-1566837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                            </div>
+                            <div class="slide">
+                                <img src="https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                            </div>
+                            
+                            <!--slide img end-->
+                            <!--automatic navigation start-->
+                            <div class="nav-auto">
+                                <div class="auto-btn1"></div>
+                                <div class="auto-btn2"></div>
+                                <div class="auto-btn3"></div>
+                                <div class="auto-btn4"></div>
+                            </div>
+                            <!--automatic navigation end-->
+                        </div>
+                        <!--manual nav start-->
+                        <div class="nav-manual">
+                            <label for="radio1" class="manual-btn"></label>
+                            <label for="radio2" class="manual-btn"></label>
+                            <label for="radio3" class="manual-btn"></label>
+                            <label for="radio4" class="manual-btn"></label>
+                        </div>
+                        <!--manual nav end-->
+                    </div>
+                </div>
+        
+            </div>
+            <div id="reserve">
+                <br>
+                <h2 style="font-size: 30px; text-align: center;">RESERVE A TABLE </h2>
+                <div class="reserve-table">
+                    <p style="font-family:'Raleway', sans-serif; text-align: center;padding-top: 2%;"><b>Fill this form to reserve a table.</b></p>
+                    <form id="reserve-form" method="post" action="mailto:zadecoku@gmail.com" enctype="text/plain">
+                        <input  type="text"  id="a1" placeholder="Full Name" required >
+                        <input  type="text" id="a2" placeholder="Number of people" required>
+                        <input type="text" id="a3" placeholder="Phone number" required>
+                        <input  type="datetime-local" id="a4" placeholder="Date and Time" value="2020-11-16T20:00" required> <br><br>
+                        <textarea name="feedback" rows="10" cols="70" placeholder="Additional requests" id="text-area"></textarea><br><br>
+                        <input  type="submit"  id="a5" value="Reserve now" onclick="Reserve()">
+                    </form> 
+                </div>
+                 <br>
+
+            </div>
+            <!-- <div id="about">
+
+            </div> -->
+            <div id="feedback">
+                <h1>Please leave your feedback below.</h1>
+                <div id="feedback-form-con">
+                <form id="feedback-form" method="post" target="_blank" autocomplete="on">
+                    
+                        <div>
+                            <p>How do you rate your overall experience?</p>
+                        </div>
+                        
+                        <div id="feedback-form-inputs">
+                            <div>
+                                <div>
+                                    <input type="radio" id="bad">
+                                    <label for="bad">Bad</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="average">
+                                    <label for="average">Average</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="good" >
+                                    <label for="good">Good</label>
+                                </div>
+                                
+                            </div>
+                            <div>
+                                <input type="text" id="name "  placeholder="Name" required>
+                                <input type="text" id="surname" placeholder="Surname" required>
+                                <input type="email" id="email"  placeholder="Email" required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <textarea id="feedback-text" name="feedback" rows="10" cols="110" placeholder="What to improve?"></textarea><br><br>
+
+                        </div>
+                        <div>
+                            <input id="submit-form" type="submit"  value="Submit" onclick="Feedback()">
+
+                        </div>
+                   
+                    
+                </form>
+                </div>
+            </div>
+        </div>
+
+        
+
+
+
+        <footer>
+            <div id="footer-con">
+                <div id="address">
+                    <div id="open-hours" >
+                        <h2>Opening Hours:</h2>
+                        <ul>
+                            <li><p>Monday: 10am-12pm</p></li>
+                            <li><p>Tuesday: 10am-12pm</p></li>
+                            <li><p>Wednesday: 10am-12pm</p></li>
+                            <li><p>Thursday: 10am-12pm</p></li>
+                            <li><p>Fridayday: 10am-12pm</p></li>
+                            <li><p>Saturday & Sunday: 10am-9pm</p></li>
+                        </ul>
+                    </div>
+                    
+                    <div id="location-footer">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.8205432160194!2d19.81423475032304!3d41.33451550713351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1350310db0518c2f%3A0x66adc753e7cc308!2sFaculty%20of%20Natural%20Sciences!5e0!3m2!1sen!2s!4v1653633848990!5m2!1sen!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                    <div id="contacts">
+                        <div>
+                            <div>
+                                Phone:
+                            </div>
+                            <div>
+                                <a href="tel:+355692419682">+35572912373 </a>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                Email:
+                            </div>
+                           <div>
+                                <a href="mailto:bar.restaurant@gmail.com">bar.restaurant@gmail.com</a>
+                           </div>
+                        </div>
+                        
+                        
+                    </div>                             
+                </div>
+
+
+                <div id="keep-in-touch">
+                    <div>
+                        <h4>KEEP IN TOUCH</h4>
+                    </div>
+                    <div id="links">
+                        <a href="https://www.linkedin.com/in/zadecoku/" target="_blank"><img src="https://img.icons8.com/material-outlined/2x/facebook-new.png"></a>
+                        <a href="https://www.instagram.com/nada_2805/?hl=en" target="_blank"><img src="https://img.icons8.com/material-outlined/2x/instagram-new.png"></a>
+                        <a href="https://wa.me/+355692419682" target="_blank"><img src="https://img.icons8.com/material-outlined/2x/whatsapp.png"></a>
+                        <a href="mailto:bar.restaurant@gmail.com" target="_blank"><img src="https://img.icons8.com/material-rounded/2x/new-post.png"></a>
+                        
+                    </div>
+                    <div>
+                        <p>All rights reserved | The P'sghetti Bar 2021</p>
+                    </div>
+                    <div>
+                        <p>By &NAMES</p>
+                    </div>
+                </div>
+        
+            </div>
+
+    </footer>
+   
+</body>
+</html>
